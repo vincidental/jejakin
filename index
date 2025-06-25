@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejakin: A Strategic Blueprint for Dominance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 6rem; 
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #1F2937;
+        }
+        h1, h2, h3, .nav-link {
+            font-family: 'Poppins', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-arrow {
+            position: relative;
+            color: #10B981;
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        .flowchart-card {
+            border: 2px solid #10B981;
+            transition: all 0.3s ease;
+        }
+        .flowchart-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2), 0 4px 6px -2px rgba(16, 185, 129, 0.1);
+        }
+        .kpi-card {
+            background-color: #ECFDF5;
+            border-left: 5px solid #10B981;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -21px;
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            background-color: #10B981;
+            border-radius: 9999px;
+            border: 3px solid #6EE7B7;
+        }
+        .swot-grid > div {
+             background-color: rgba(16, 185, 129, 0.05);
+             border: 1px solid #6EE7B7;
+        }
+        .animated-gradient-header {
+            background: linear-gradient(270deg, #064e3b, #047857, #065f46, #047857, #064e3b);
+            background-size: 400% 400%;
+            animation: gradient-wave 10s ease infinite;
+        }
+        @keyframes gradient-wave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 py-4 px-4 md:px-8 animated-gradient-header shadow-lg">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <div class="w-32 md:w-40">
+                <a href="#executive-summary"><img src="https://cdn.prod.website-files.com/6316f54ef95959ae488c5127/641029a11f1bfe5c976cee93_Jejak.in%20Logo.svg" alt="Jejakin Logo" class="w-full h-auto"></a>
+            </div>
+            <nav>
+                <ul class="flex items-center space-x-2 md:space-x-4">
+                    <li><a href="#executive-summary" class="nav-link text-xs md:text-base font-semibold text-white hover:text-emerald-200 transition-colors">Exum</a></li>
+                    <li><a href="#market-opportunity" class="nav-link text-xs md:text-base font-semibold text-white hover:text-emerald-200 transition-colors">Market</a></li>
+                    <li><a href="#jejakin-ecosystem" class="nav-link text-xs md:text-base font-semibold text-white hover:text-emerald-200 transition-colors">Anatomy</a></li>
+                    <li><a href="#competitive-arena" class="nav-link text-xs md:text-base font-semibold text-white hover:text-emerald-200 transition-colors">Positioning</a></li>
+                    <li><a href="#strategic-plan" class="nav-link text-xs md:text-base font-semibold text-white hover:text-emerald-200 transition-colors">Mandate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container mx-auto p-4 md:p-8">
+            
+            <section id="executive-summary" class="py-8 md:py-12">
+                <div class="max-w-4xl mx-auto px-4">
+                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Executive Summary</h2>
+                     <div class="text-left text-gray-700 space-y-4 text-lg">
+                        <p><strong>The Mandate:</strong> In a market redefined by mandatory sustainability regulations, this blueprint outlines a focused plan to secure Jejakin's position as the undisputed leader of Indonesian climate-tech.</p>
+                        <p><strong>The Ecosystem Advantage:</strong> While facing well-funded competitors, our powerful, defensible ecosystem which integrates carbon accounting, verified nature-based solutions, and scalable API technology provides a unique and decisive edge.</p>
+                        <p><strong>The Strategy:</strong> We will achieve market dominance through a three-pillar strategy: winning the enterprise sector, forging ecosystem-wide leadership, and architecting the internal organization for hyper-growth.</p>
+                        <div class="text-right text-base pt-6">
+                             <em class="font-normal block italic">Prepared by</em>
+                            <a href="https://www.linkedin.com/in/vincentiustheodore/" target="_blank" rel="noopener noreferrer" class="inline-block text-emerald-600 font-semibold no-underline hover:text-emerald-800 transition">
+                                Vincentius Theodore
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="market-opportunity" class="py-8 md:py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">The Indonesian Sustainability Imperative</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-600">Indonesia's green economic transformation, supercharged by powerful regulatory tailwinds, is creating a generational opportunity. A mandatory, data-driven market for climate solutions is no longer emerging—it's here.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 text-center">
+                    <div class="kpi-card p-6 rounded-lg shadow-lg">
+                        <h3 class="text-4xl font-bold text-emerald-600">$1.34B</h3>
+                        <p class="mt-2 text-sm text-gray-600">Projected Green Data Center Market by 2032 (18.4% CAGR)</p>
+                    </div>
+                    <div class="kpi-card p-6 rounded-lg shadow-lg">
+                        <h3 class="text-4xl font-bold text-emerald-600">$115M</h3>
+                        <p class="mt-2 text-sm text-gray-600">Projected Recovered Carbon Black Market by 2035 (19.0% CAGR)</p>
+                    </div>
+                    <div class="kpi-card p-6 rounded-lg shadow-lg md:col-span-2 lg:col-span-1">
+                        <h3 class="text-4xl font-bold text-emerald-600">$425M</h3>
+                        <p class="mt-2 text-sm text-gray-600">Projected Sustainable Industrial Design Market by 2032</p>
+                    </div>
+                </div>
+    
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-white p-6 rounded-lg shadow-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Market Growth Projections (2024-2035)</h3>
+                        <p class="text-sm text-center mb-4 text-gray-600">Explosive growth across key green-adjacent sectors signals a broad industrial shift, creating a vast addressable market for Jejakin's data-driven platform.</p>
+                        <div class="chart-container mx-auto">
+                            <canvas id="marketGrowthChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Policy as a Catalyst: Regulatory Timeline</h3>
+                        <p class="text-sm text-center mb-6 text-gray-600">The government has systematically built a regulatory framework that transforms sustainability from a voluntary exercise into a mandatory business function.</p>
+                        <div class="relative pl-8 border-l-2 border-dashed border-emerald-400">
+                            <div class="timeline-item mb-8">
+                                <h4 class="font-bold text-gray-800">2017: The Foundation</h4>
+                                <p class="text-sm text-gray-600">OJK Regulation No. 51 mandates sustainability reporting for financial institutions and public companies.</p>
+                            </div>
+                            <div class="timeline-item mb-8">
+                                <h4 class="font-bold text-gray-800">2021: The Mechanism</h4>
+                                <p class="text-sm text-gray-600">Presidential Regulation No. 98 establishes the legal framework for a carbon economic value.</p>
+                            </div>
+                            <div class="timeline-item mb-8">
+                                <h4 class="font-bold text-gray-800">2023: The Marketplace</h4>
+                                <p class="text-sm text-gray-600">The Indonesia Carbon Exchange (IDXCarbon) officially launches, operationalizing the carbon market.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">2027: The Future</h4>
+                                <p class="text-sm text-gray-600">Planned adoption of IFRS S1 & S2 standards will elevate reporting rigor to global best-practice levels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="jejakin-ecosystem" class="py-8 md:py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Anatomy of a Climate-Tech Pioneer</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-600">Jejakin's core advantage is not a single product, but a deeply integrated, end-to-end ecosystem that creates a self-reinforcing flywheel for decarbonization and customer value.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-2xl mb-12 border border-gray-200">
+                     <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">The Platform Flywheel: A Virtuous Cycle</h3>
+                    <div class="flex flex-col items-center gap-4 text-center">
+                        <div class="w-full md:w-3/5 flowchart-card bg-emerald-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700">CarbonIQ</h4>
+                            <p class="text-xs text-emerald-600">Measure & Report GHG Emissions</p>
+                        </div>
+                         <div class="flowchart-arrow">⬇</div>
+                        <div class="w-full md:w-3/5 flowchart-card bg-emerald-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700">CarbonSpace</h4>
+                            <p class="text-xs text-emerald-600">Offset Footprint via Marketplace</p>
+                        </div>
+                        <div class="flowchart-arrow">⬇</div>
+                        <div class="w-full md:w-3/5 flowchart-card bg-emerald-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700">CarbonAtlas</h4>
+                            <p class="text-xs text-emerald-600">Verify Impact with Digital MRV</p>
+                        </div>
+                        <div class="flowchart-arrow">⬇</div>
+                        <div class="w-full md:w-3/5 flowchart-card bg-emerald-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700">CarbonAPI</h4>
+                            <p class="text-xs text-emerald-600">Integrate & Scale Engagement</p>
+                        </div>
+                    </div>
+                     <p class="text-center text-sm text-gray-600 mt-6">Each new client attracted by compliance needs (CarbonIQ) creates qualified demand for high-integrity offsets (CarbonSpace), whose value is guaranteed by technology (CarbonAtlas), and can be scaled to millions of users (CarbonAPI).</p>
+                </div>
+    
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                     <div class="bg-white p-6 rounded-lg shadow-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Building the "Trust Moat"</h3>
+                        <p class="text-sm text-center mb-4 text-gray-600">In an industry wary of greenwashing, trust is the most valuable currency. Jejakin builds a formidable defense through credibility and transparency.</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start"><span class="text-emerald-500 mr-3 mt-1">✔</span><span><strong>B Corp Certified:</strong> A legal commitment to high standards of social and environmental performance.</span></li>
+                            <li class="flex items-start"><span class="text-emerald-500 mr-3 mt-1">✔</span><span><strong>Elite Alliances:</strong> Partnerships with trusted titans like GoTo and Bank Mandiri act as powerful endorsements.</span></li>
+                            <li class="flex items-start"><span class="text-emerald-500 mr-3 mt-1">✔</span><span><strong>Tech-First Verification:</strong> CarbonAtlas replaces ambiguity with data, using AI, IoT, and satellite monitoring.</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Financial Posture & Funding</h3>
+                        <p class="text-sm text-center mb-4 text-gray-600">Jejakin's hybrid model and strategic seed funding position it for capital-efficient, product-led growth.</p>
+                        <div class="chart-container mx-auto" style="height:250px; max-height: 280px;">
+                            <canvas id="fundingDoughnutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="competitive-arena" class="py-8 md:py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Positioning in a Crowded Field</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-600">Jejakin's integrated ecosystem serves as its primary defense, positioning it as the comprehensive solution in a market of specialized point solutions.</p>
+                </div>
+                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                     <div class="bg-white p-6 rounded-lg shadow-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Competitive Funding Landscape</h3>
+                        <p class="text-sm text-center mb-4 text-gray-600">While strong locally, Jejakin faces well-funded regional competitors, necessitating a capital-efficient, technology-leveraged strategy.</p>
+                        <div class="chart-container mx-auto" style="height:300px;">
+                            <canvas id="fundingBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-2xl border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Competitive Differentiation Matrix</h3>
+                        <p class="text-sm text-center mb-4 text-gray-600">Jejakin's unique value proposition becomes clear when compared against competitors on key strategic dimensions.</p>
+                        <div class="chart-container mx-auto">
+                            <canvas id="competitorRadarChart"></canvas>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+    
+            <section id="strategic-plan" class="py-8 md:py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">The CEO Office Mandate</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-600">A focused, three-pillar strategic plan to transition Jejakin from a promising startup to the undisputed champion of Indonesian climate-tech.</p>
+                </div>
+    
+                <div class="bg-white p-8 rounded-lg shadow-2xl mb-12 border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Foundational SWOT Analysis</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 swot-grid text-sm">
+                        <div class="p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700 mb-2">Strengths 💪</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Integrated Tech Stack (Flywheel)</li>
+                                <li>"Trust Moat" (B-Corp, Alliances)</li>
+                                <li>Deep Indonesian Focus</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700 mb-2">Weaknesses ⚠️</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Limited Funding vs Global Peers</li>
+                                <li>Product Suite Complexity</li>
+                                <li>Early-Stage Scalability Challenges</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700 mb-2">Opportunities 🚀</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Mandatory Regulatory Market</li>
+                                <li>"Flight to Quality" for Carbon Credits</li>
+                                <li>Consultancy Channel Partnerships</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 rounded-lg">
+                            <h4 class="font-bold text-emerald-700 mb-2">Threats 📉</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Competitor Encroachment</li>
+                                <li>Industry-Wide Reputational Risk</li>
+                                <li>Potential Regulatory Drag</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3 text-center">Pillar 1: Win the Enterprise</h4>
+                         <p class="text-xs text-center mb-4 text-gray-600">Capture the highest-value market segment.</p>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-2xl mr-3">🎯</span><span>"IDX Carbon" Go-to-Market strategy.</span></li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">📈</span><span>Product roadmap for "Regulatory Capture".</span></li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">📦</span><span>Vertical-specific solution bundles.</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3 text-center">Pillar 2: Forge Leadership</h4>
+                         <p class="text-xs text-center mb-4 text-gray-600">Become the market's benchmark for quality.</p>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-2xl mr-3">⭐</span><span>Establish the "Jejakin Verified" Standard.</span></li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">🏦</span><span>Deepen financial sector integration.</span></li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">🤝</span><span>Launch community empowerment program.</span></li>
+                        </ul>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3 text-center">Pillar 3: Architect for Scale</h4>
+                         <p class="text-xs text-center mb-4 text-gray-600">Build the internal machine for hyper-growth.</p>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-2xl mr-3">🧠</span><span>Scalable, product-focused talent architecture.</span></li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">🧭</span><span>Implement OKR-based planning cadence.</span></li>
+                            <li class="flex items-center"><span class="text-2xl mr-3">💰</span><span>Proactively prepare for Series A raise.</span></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="bg-emerald-50 p-8 rounded-lg shadow-2xl">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-6 text-center">The First 100 Days: An Actionable Roadmap</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div>
+                            <h4 class="text-lg font-bold text-emerald-700">Days 1-30</h4>
+                            <p class="text-sm text-emerald-600 mt-2">Deep Dive & Internal Alignment. Conduct interviews, map processes, and secure CEO buy-in.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-lg font-bold text-emerald-700">Days 31-60</h4>
+                            <p class="text-sm text-emerald-600 mt-2">Launch Quick-Wins. Initiate partnership talks, draft "Jejakin Verified" concept, launch OKR cycle.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-lg font-bold text-emerald-700">Days 61-100</h4>
+                            <p class="text-sm text-emerald-600 mt-2">Build Momentum. Secure first pilot partnership and host thought leadership roundtable.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        </div>
+    
+        <footer class="text-center p-6 mt-12 bg-gray-100">
+            <p class="text-sm text-gray-500">Strategic Infographic developed for Jejakin CEO Office. All data synthesized from the Strategic Analysis & Growth Blueprint report.</p>
+        </footer>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+    
+                const wrapLabel = (str, maxWidth) => {
+                    if (str.length <= maxWidth) {
+                        return str;
+                    }
+                    const words = str.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    words.forEach(word => {
+                        if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                            lines.push(currentLine);
+                            currentLine = word;
+                        } else {
+                            currentLine = (currentLine + ' ' + word).trim();
+                        }
+                    });
+                    if (currentLine.length > 0) {
+                        lines.push(currentLine);
+                    }
+                    return lines;
+                };
+                
+                const commonTooltipCallback = {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        return Array.isArray(label) ? label.join(' ') : label;
+                    }
+                };
+                
+                const chartDefaultOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#374151',
+                                font: {
+                                    family: "'Inter', sans-serif"
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: commonTooltipCallback,
+                            backgroundColor: '#059669',
+                            titleColor: '#FFFFFF',
+                            bodyColor: '#ECFDF5',
+                            borderColor: '#6EE7B7',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { 
+                                color: '#4B5563',
+                                font: {
+                                    family: "'Inter', sans-serif"
+                                } 
+                            },
+                            grid: { color: 'rgba(209, 213, 219, 0.5)' }
+                        },
+                        y: {
+                            ticks: { 
+                                color: '#4B5563',
+                                font: {
+                                    family: "'Inter', sans-serif"
+                                }
+                            },
+                            grid: { color: 'rgba(209, 213, 219, 0.5)' }
+                        }
+                    }
+                };
+    
+                const marketGrowthCtx = document.getElementById('marketGrowthChart');
+                if(marketGrowthCtx) {
+                    new Chart(marketGrowthCtx, {
+                        type: 'line',
+                        data: {
+                            labels: ['2024', '2026', '2028', '2030', '2032', '2035'],
+                            datasets: [
+                                {
+                                    label: 'Green Data Centers ($M)',
+                                    data: [348.51, 555, 780, 1050, 1342.80, null],
+                                    borderColor: '#059669',
+                                    backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                                    fill: true,
+                                    tension: 0.4
+                                },
+                                {
+                                    label: 'Recovered Carbon Black ($M)',
+                                    data: [17, 28, 45, 70, 95, 115],
+                                    borderColor: '#047857',
+                                    backgroundColor: 'rgba(5, 150, 105, 0.2)',
+                                    fill: true,
+                                    tension: 0.4
+                                }
+                            ]
+                        },
+                        options: chartDefaultOptions
+                    });
+                }
+    
+                const fundingDoughnutCtx = document.getElementById('fundingDoughnutChart');
+                if (fundingDoughnutCtx) {
+                    new Chart(fundingDoughnutCtx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Seed Funding Raised', 'Investor Syndicate'],
+                            datasets: [{
+                                label: 'Funding',
+                                data: [2.7, 0],
+                                backgroundColor: ['#10B981', '#E5E7EB'],
+                                borderColor: '#FFFFFF',
+                                borderWidth: 4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                         label: (context) => `$${context.parsed}M Seed Round from East Ventures, Indogen Capital, & SMDV.`
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: '$2.7M Seed Funding',
+                                    color: '#1F2937',
+                                    font: { size: 18, family: "'Poppins', sans-serif" }
+                                }
+                            },
+                            cutout: '70%',
+                        }
+                    });
+                }
+    
+                const fundingBarCtx = document.getElementById('fundingBarChart');
+                if(fundingBarCtx) {
+                     new Chart(fundingBarCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Fairatmos', 'Zuno Carbon', 'Jejakin'],
+                            datasets: [{
+                                label: 'Total Funding (USD M)',
+                                data: [4.5, 3.0, 2.7],
+                                backgroundColor: ['#065F46', '#059669', '#10B981'],
+                                borderColor: '#FFFFFF',
+                                borderWidth: 2
+                            }]
+                        },
+                        options: { 
+                            ...chartDefaultOptions, 
+                            plugins: { 
+                                legend: {display: false} 
+                            } 
+                        }
+                    });
+                }
+    
+                const competitorRadarCtx = document.getElementById('competitorRadarChart');
+                if(competitorRadarCtx) {
+                     new Chart(competitorRadarCtx, {
+                        type: 'radar',
+                        data: {
+                            labels: [
+                                'Integrated Platform', 
+                                'Tech-Verified NbS', 
+                                'Scalability', 
+                                wrapLabel('Enterprise Compliance Focus', 16),
+                                'Trust Moat'
+                            ],
+                            datasets: [
+                                {
+                                    label: 'Jejakin',
+                                    data: [5, 5, 4, 5, 5],
+                                    fill: true,
+                                    backgroundColor: 'rgba(16, 185, 129, 0.3)',
+                                    borderColor: '#10B981',
+                                    pointBackgroundColor: '#10B981',
+                                    pointBorderColor: '#fff',
+                                    pointHoverBackgroundColor: '#fff',
+                                    pointHoverBorderColor: '#10B981'
+                                },
+                                {
+                                    label: 'Zuno Carbon',
+                                    data: [4, 1, 4, 5, 2],
+                                    fill: true,
+                                    backgroundColor: 'rgba(110, 231, 183, 0.3)',
+                                    borderColor: '#6EE7B7',
+                                    pointBackgroundColor: '#6EE7B7',
+                                    pointBorderColor: '#fff',
+                                    pointHoverBackgroundColor: '#fff',
+                                    pointHoverBorderColor: '#6EE7B7'
+                                },
+                                {
+                                    label: 'Fairatmos',
+                                    data: [2, 4, 3, 2, 3],
+                                    fill: true,
+                                    backgroundColor: 'rgba(107, 114, 128, 0.3)',
+                                    borderColor: '#6B7280',
+                                    pointBackgroundColor: '#6B7280',
+                                    pointBorderColor: '#fff',
+                                    pointHoverBackgroundColor: '#fff',
+                                    pointHoverBorderColor: '#6B7280'
+                                }
+                            ]
+                        },
+                         options: {
+                            ...chartDefaultOptions,
+                            scales: {
+                                r: {
+                                    beginAtZero: true,
+                                    max: 5,
+                                    pointLabels: {
+                                        color: '#374151',
+                                        font: { size: 10, family: "'Inter', sans-serif" }
+                                    },
+                                    grid: { color: 'rgba(209, 213, 219, 0.5)' },
+                                    angleLines: { color: 'rgba(229, 231, 235, 1)' },
+                                    ticks: {
+                                        color: '#4B5563',
+                                        backdropColor: 'rgba(0,0,0,0)',
+                                        stepSize: 1
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+</body>
+</html>
